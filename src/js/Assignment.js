@@ -3,13 +3,33 @@ import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
 
 const Assignment = (props) => {
+	const {assignment, updateAssignment, index} = props;
+
+	const handleChange = (type) => (
+		({target: {value}}) => {
+			updateAssignment(index, type, value);
+		}
+	);
+
 	return (
 		<Box my={2} style={{
 			"display": "flex",
-			"justify-content": "space-around",
+			"justifyContent": "space-around",
 		}}>
-			<TextField placeholder="0-100" helperText="Literal Mark (0-100)" defaultValue="0" type="number" />
-			<TextField placeholder="0-100%" helperText="Weighting (0-100%)" defaultValue="0" type="number" />
+			<TextField
+				value={assignment.mark}
+				type="number"
+				placeholder="0-100"
+				helperText="Literal Mark (0-100)"
+				onChange={handleChange("mark")}
+			/>
+			<TextField
+				value={assignment.weight}
+				type="number"
+				placeholder="0-100%"
+				helperText="Weighting (0-100%)"
+				onChange={handleChange("weight")}
+			/>
 		</Box>
 	);
 };
