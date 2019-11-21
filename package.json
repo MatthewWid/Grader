@@ -1,0 +1,19 @@
+{
+  "name": "grader",
+  "version": "0.1.0",
+  "author": "MatthewWid <115mattey@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html -d ./build/"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.7"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.6.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
