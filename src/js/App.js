@@ -34,6 +34,12 @@ const App = () => {
 		setAssignments(newAssignments);
 	};
 
+	const removeAssignment = (index) => {
+		const newAssignments = [...assignments].filter((_, i) => i !== index);
+
+		setAssignments(newAssignments);
+	};
+
 	return (
 		<Fragment>
 			<CssBaseline />
@@ -43,7 +49,11 @@ const App = () => {
 					<Typography variant="body1" paragraph>Enter your assignment marks and their relative weightings.</Typography>
 					<Typography variant="body1" paragraph>Your total mark will be automatically calculated based on the inputted values.</Typography>
 					<Divider />
-					<AssignmentList assignments={assignments} updateAssignment={updateAssignment} />
+					<AssignmentList
+						assignments={assignments}
+						updateAssignment={updateAssignment}
+						removeAssignment={removeAssignment}
+					/>
 					<Box m={2} style={{
 						"textAlign": "center"
 					}}>

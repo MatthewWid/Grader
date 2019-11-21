@@ -1,9 +1,11 @@
 import React from "react";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 const Assignment = (props) => {
-	const {assignment, updateAssignment, index} = props;
+	const {assignment, index, updateAssignment, removeAssignment} = props;
 
 	const handleChange = (type) => (
 		({target: {value}}) => {
@@ -30,6 +32,9 @@ const Assignment = (props) => {
 				helperText="Weighting (0-100%)"
 				onChange={handleChange("weight")}
 			/>
+			<IconButton onClick={() => removeAssignment(index)}>
+				<DeleteIcon />
+			</IconButton>
 		</Box>
 	);
 };
