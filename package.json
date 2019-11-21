@@ -1,7 +1,6 @@
 {
   "name": "grader",
   "version": "0.1.0",
-  "author": "MatthewWid <115mattey@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html",
