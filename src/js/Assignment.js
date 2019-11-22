@@ -24,6 +24,10 @@ const Assignment = (props) => {
 				placeholder="0-100"
 				helperText="Literal Mark (0-100%)"
 				onChange={handleChange("mark")}
+				inputProps={{
+					min: "0",
+					max: "100",
+				}}
 			/>
 			<TextField
 				value={assignment.weight}
@@ -31,6 +35,10 @@ const Assignment = (props) => {
 				placeholder="0-100%"
 				helperText="Weighting (0-100%)"
 				onChange={handleChange("weight")}
+				inputProps={{
+					min: "0",
+					max: "100",
+				}}
 			/>
 			<IconButton onClick={() => removeAssignment(index)}>
 				<DeleteIcon />

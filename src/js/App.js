@@ -135,7 +135,7 @@ const App = () => {
 					/>
 					<Box m={2} display="flex" justifyContent="space-evenly">
 						<Button variant="contained" color="primary" onClick={addAssignment}>Add Assignment</Button>
-						<Button variant="outlined" color="secondary" onClick={removeAllAssignments}>Remove All</Button>
+						<Button variant="outlined" color="secondary" onClick={removeAllAssignments}>Reset All</Button>
 					</Box>
 					<Divider />
 					<ResultsViewer totalMark={totalMark} grade={grade} />
