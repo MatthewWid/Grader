@@ -102,7 +102,9 @@ const App = () => {
 	const updateAssignment = (index, key, value) => {
 		const newAssignments = [...assignments];
 
-		newAssignments[index][key] = value;
+		const clampedVal = value === "" ? value : value <= 0 ? 0 : value >= 100 ? 100 : value;
+
+		newAssignments[index][key] = clampedVal;
 
 		setAssignments(newAssignments);
 	};
