@@ -140,6 +140,7 @@ const App = () => {
 					<Divider />
 					<ResultsViewer totalMark={totalMark} grade={grade} />
 				</Box>
+				<Typography variant="subtitle2" gutterBottom align="center">A tool by Matthew W.</Typography>
 			</Container>
 		</Fragment>
 	);
