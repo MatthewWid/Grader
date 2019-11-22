@@ -13,26 +13,31 @@ const grades = [
 		name: "F",
 		mark: 0,
 		colour: "#cc0000",
+		flavour: "Better luck next time.",
 	},
 	{
 		name: "P",
 		mark: 50,
 		colour: "#14b814",
+		flavour: "Good enough.",
 	},
 	{
 		name: "Cr",
 		mark: 65,
-		colour: "#c20ac2"
+		colour: "#c20ac2",
+		flavour: "Nice going!",
 	},
 	{
 		name: "D",
 		mark: 75,
 		colour: "#5ab5e2",
+		flavour: "Impressive!",
 	},
 	{
 		name: "HD",
 		mark: 85,
 		colour: "#0088cc",
+		flavour: "Absolute perfection.",
 	}
 ];
 
@@ -108,6 +113,12 @@ const App = () => {
 		setAssignments(newAssignments);
 	};
 
+	const removeAllAssignments = () => {
+		const newAssignments = [{...defaultAssignment}];
+
+		setAssignments(newAssignments);
+	};
+
 	return (
 		<Fragment>
 			<CssBaseline />
@@ -122,10 +133,9 @@ const App = () => {
 						updateAssignment={updateAssignment}
 						removeAssignment={removeAssignment}
 					/>
-					<Box m={2} style={{
-						"textAlign": "center"
-					}}>
+					<Box m={2} display="flex" justifyContent="space-evenly">
 						<Button variant="contained" color="primary" onClick={addAssignment}>Add Assignment</Button>
+						<Button variant="outlined" color="secondary" onClick={removeAllAssignments}>Remove All</Button>
 					</Box>
 					<Divider />
 					<ResultsViewer totalMark={totalMark} grade={grade} />

@@ -45,6 +45,7 @@ const ResultsViewer = (props) => {
 								color: grade.colour,
 							}}>{grade.name}</Typography>
 							<Typography variant="subtitle1" align="center">Grade</Typography>
+							<Typography variant="subtitle2" align="center">{grade.flavour}</Typography>
 						</CardContent>
 					</Card>
 				</Grid>
