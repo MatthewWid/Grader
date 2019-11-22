@@ -31,8 +31,12 @@ const ResultsViewer = (props) => {
 							}}>{totalMark}%</Typography>
 							<Typography variant="subtitle1" align="center">Total Mark</Typography>
 							{
-								grade.name !== "HD" &&
+								grade.mark < 85 &&
 								<Typography variant="subtitle2" align="center">{Math.round((85 - totalMark) * 100) / 100}% more for HD</Typography>
+							}
+							{
+								grade.mark < 50 &&
+								<Typography variant="subtitle2" align="center">{Math.round((50 - totalMark) * 100) / 100}% more for Pass</Typography>
 							}
 						</CardContent>
 					</Card>

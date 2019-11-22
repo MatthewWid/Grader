@@ -110,6 +110,10 @@ const App = () => {
 	const removeAssignment = (index) => {
 		const newAssignments = [...assignments].filter((_, i) => i !== index);
 
+		if (newAssignments.length === 0) {
+			newAssignments[0] = {...defaultAssignment};
+		}
+
 		setAssignments(newAssignments);
 	};
 
