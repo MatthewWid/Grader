@@ -490,4 +490,4 @@ function r(){return module.exports=r=Object.assign||function(r){for(var t=1;t<ar
 },{}],"QvaY":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App.js"));function u(e){return e&&e.__esModule?e:{default:e}}require("../css/index.scss"),r.default.render(e.default.createElement(t.default,null),document.getElementById("container"));
 },{"react":"n8MK","react-dom":"NKHc","./App.js":"aeIX","../css/index.scss":"NwIN"}]},{},["QvaY"], null)
-//# sourceMappingURL=/grader/js.82f2bb77.js.map
+//# sourceMappingURL=/Grader/js.82f2bb77.js.map
