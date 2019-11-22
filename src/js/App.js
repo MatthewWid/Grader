@@ -12,7 +12,7 @@ const grades = [
 	{
 		name: "F",
 		mark: 0,
-		colour: "#e00000",
+		colour: "#cc0000",
 	},
 	{
 		name: "P",
@@ -27,12 +27,12 @@ const grades = [
 	{
 		name: "D",
 		mark: 75,
-		colour: "#0088cc",
+		colour: "#5ab5e2",
 	},
 	{
 		name: "HD",
 		mark: 85,
-		colour: "#0cdfdf",
+		colour: "#0088cc",
 	}
 ];
 
