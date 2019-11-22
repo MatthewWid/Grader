@@ -2,6 +2,8 @@
 
 Input your assignment marks and their relative weightings, and your total mark will be automatically calculated for you.
 
+[**View the live demo**](https://matthewwid.github.io/Grader/)
+
 Made with React and Material-UI.
 
 ## Installation and Usage
