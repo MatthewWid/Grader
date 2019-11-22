@@ -36,13 +36,13 @@ const grades = [
 	}
 ];
 
+const defaultAssignment = {
+	mark: 0,
+	weight: 0,
+};
+
 const App = () => {
-	const [assignments, setAssignments] = useState([
-		{
-			mark: 0,
-			weight: 0,
-		},
-	]);
+	const [assignments, setAssignments] = useState([{...defaultAssignment}]);
 	const [totalMark, setTotalMark] = useState(0);
 	const [grade, setGrade] = useState(grades[0]);
 
@@ -62,6 +62,26 @@ const App = () => {
 	useEffect(() => {
 		calculateTotals();
 	}, [assignments, totalMark]);
+
+	const getStoredAssignments = () => {
+		const storedAssignments = JSON.parse(localStorage.getItem("grader-assignments"));
+
+		if (storedAssignments && storedAssignments.length > 0) {
+			setAssignments(storedAssignments);
+		}
+	};
+
+	useEffect(() => {
+		getStoredAssignments();
+	}, []);
+
+	const setStoredAssignments = () => {
+		localStorage.setItem("grader-assignments", JSON.stringify(assignments));
+	};
+
+	useEffect(() => {
+		setStoredAssignments();
+	}, [assignments]);
 
 	const addAssignment = () => {
 		const newAssignments = [...assignments];
