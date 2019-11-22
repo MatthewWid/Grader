@@ -22,7 +22,7 @@ const Assignment = (props) => {
 				value={assignment.mark}
 				type="number"
 				placeholder="0-100"
-				helperText="Literal Mark (0-100)"
+				helperText="Literal Mark (0-100%)"
 				onChange={handleChange("mark")}
 			/>
 			<TextField
