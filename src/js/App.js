@@ -30,13 +30,13 @@ const grades = [
 	{
 		name: "D",
 		mark: 75,
-		colour: "#5ab5e2",
+		colour: "#0088cc",
 		flavour: "Impressive!",
 	},
 	{
 		name: "HD",
 		mark: 85,
-		colour: "#0088cc",
+		colour: "#5ab5e2",
 		flavour: "Absolute perfection.",
 	}
 ];
@@ -91,10 +91,7 @@ const App = () => {
 	const addAssignment = () => {
 		const newAssignments = [...assignments];
 
-		newAssignments.push({
-			mark: 0,
-			weight: 0,
-		});
+		newAssignments.push({...defaultAssignment});
 
 		setAssignments(newAssignments);
 	};

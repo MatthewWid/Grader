@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "parcel ./src/index.html -d ./build/",
 		"build": "rm -rf ./build/ && parcel build ./src/index.html -d ./build/ --public-url /Grader",
 		"deploy": "gh-pages -d ./build/"
   },
